@@ -1,9 +1,8 @@
 -- task_4.sql
 
--- Select the alx_book_store database, using the capitalized form
--- that is often required for database objects by the checker.
-USE ALX_BOOK_STORE;
+-- Select the alx_book_store database explicitly using the required lowercase name.
+USE alx_book_store;
 
--- Prints the full description of the 'books' table.
--- This statement is the standard alternative when DESCRIBE is disallowed.
-SHOW FULL COLUMNS FROM books;
+-- Prints the full description of the 'Books' table.
+-- CRITICAL FIX: The table name must be capitalized (Books) to match creation.
+SHOW FULL COLUMNS FROM Books;
