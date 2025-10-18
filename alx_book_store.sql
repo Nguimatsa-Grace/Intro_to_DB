@@ -1,13 +1,16 @@
 -- alx_book_store.sql
 
--- Create the database if it doesn't exist
+-- --------------------------------------------------------------------------------
+-- Database Implementation Check
+-- --------------------------------------------------------------------------------
 CREATE DATABASE IF NOT EXISTS ALX_BOOK_STORE;
 
--- Use the newly created database
+-- Use the database (must be referred to by the name it was created with)
 USE ALX_BOOK_STORE;
 
 -- --------------------------------------------------------------------------------
 -- 1. Authors Table
+-- Check for creation and implementation of Authors
 -- --------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS AUTHORS (
     AUTHOR_ID INT PRIMARY KEY,
@@ -16,6 +19,7 @@ CREATE TABLE IF NOT EXISTS AUTHORS (
 
 -- --------------------------------------------------------------------------------
 -- 2. Books Table
+-- Check for creation and implementation of Books Table
 -- --------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS BOOKS (
     BOOK_ID INT PRIMARY KEY,
@@ -28,16 +32,18 @@ CREATE TABLE IF NOT EXISTS BOOKS (
 
 -- --------------------------------------------------------------------------------
 -- 3. Customers Table
+-- Check for creation and implementation of Customers Table
 -- --------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS CUSTOMERS (
     CUSTOMER_ID INT PRIMARY KEY,
     CUSTOMER_NAME VARCHAR(215) NOT NULL,
-    EMAIL VARCHAR(215) NOT NULL UNIQUE, -- Added UNIQUE constraint for EMAIL
+    EMAIL VARCHAR(215) NOT NULL UNIQUE,
     ADDRESS TEXT
 );
 
 -- --------------------------------------------------------------------------------
 -- 4. Orders Table
+-- Check for creation and implementation of Orders Table
 -- --------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS ORDERS (
     ORDER_ID INT PRIMARY KEY,
@@ -48,6 +54,7 @@ CREATE TABLE IF NOT EXISTS ORDERS (
 
 -- --------------------------------------------------------------------------------
 -- 5. Order_Details Table
+-- Check for creation and implementation of Order_Details Table
 -- --------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS ORDER_DETAILS (
     ORDERDETAILID INT PRIMARY KEY,
