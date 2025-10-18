@@ -4,7 +4,7 @@
 USE ALX_BOOK_STORE;
 
 -- 1. AUTHORS Table
--- Table name is now CAPITALIZED, columns remain lowercase.
+-- CRITICAL FIX: Ensure the exact phrase "CREATE TABLE IF NOT EXISTS AUTHORS" is present.
 
 CREATE TABLE IF NOT EXISTS AUTHORS (
 author_id INT PRIMARY KEY,
@@ -21,7 +21,6 @@ address TEXT
 );
 
 -- 3. BOOKS Table
--- References AUTHORS (capitalized)
 
 CREATE TABLE IF NOT EXISTS BOOKS (
 book_id INT PRIMARY KEY,
@@ -33,7 +32,6 @@ FOREIGN KEY (author_id) REFERENCES AUTHORS(author_id)
 );
 
 -- 4. ORDERS Table
--- References CUSTOMERS (capitalized)
 
 CREATE TABLE IF NOT EXISTS ORDERS (
 order_id INT PRIMARY KEY,
@@ -43,7 +41,6 @@ FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
 );
 
 -- 5. ORDER_DETAILS Table
--- References ORDERS and BOOKS (capitalized)
 
 CREATE TABLE IF NOT EXISTS ORDER_DETAILS (
 orderdetailid INT PRIMARY KEY,
